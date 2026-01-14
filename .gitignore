@@ -14,5 +14,5 @@ venv/
 # Pytest
 .pytest_cache/
 
-# Local artifacts
-processed_email.txt
+# # Local artifacts
+# processed_email.txt
