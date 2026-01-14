@@ -12,7 +12,7 @@ Add comments explaining each fix when you're done.
 def calculate_bmi(weight_kg, height_cm):
     """Calculate BMI from weight (kg) and height (cm)."""
     height_m = height_cm / 100
-    bmi = weight_kg / height_m
+    bmi = weight_kg / (height_m ** 2)
     return bmi
 
 
@@ -27,7 +27,7 @@ def get_risk_level(bmi):
     else:
         risk_lvl = "High risk (obese)"
 
-    return risk_level
+    return risk_lvl
 
 
 def analyze_patient_data(patients):
@@ -37,7 +37,7 @@ def analyze_patient_data(patients):
 
     results = []
 
-    for i in range(len(patients) - 1):
+    for i in range(len(patients)):
         name, weight, height = patients[i]
         bmi = calculate_bmi(weight, height)
         risk = get_risk_level(bmi)
